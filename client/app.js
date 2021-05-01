@@ -48,6 +48,8 @@ const App = () => {
       setDisplay(false);
     }
   }
+  console.log('display', displayAbout);
+
   return (
     <Body>
       <Wrapper>
@@ -69,13 +71,7 @@ const App = () => {
         </UL>
       </Wrapper>
       {/* conditional render About component: if true display / if false display nothing */}
-      {() => {
-        if (displayAbout === false) {
-          return null;
-        } else {
-          return <About />
-        }
-      }}
+      {displayAbout === false ? null : <About />}
     </Body>
   )
 };
