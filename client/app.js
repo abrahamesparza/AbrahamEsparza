@@ -1,10 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import styled, { keyframes } from 'styled-components';
-import About from './components/about';
+import Page from './components/page';
 
 const App = () => {
-  let [displayAbout, setDisplay] = useState(false);
+  let [displayPage, setDisplay] = useState(false);
+  let [page, setPage] = useState('');
+  let [active, setActive] = useState(false);
 
+  useEffect(() => {
+    // nothing yet
+  }, []);
+
+  /* styled components */
   const FadeIn = keyframes`
     from {
       opacity: 0;
@@ -40,20 +47,27 @@ const App = () => {
     max-width: 100%;
     max-height: 100%;
   `;
-  let handleDisplay = () => {
-    if (displayAbout === false) {
-      console.log('display', displayAbout);
+  /* styled components */
+
+  let handleDisplay = (e) => {
+    let target = e.target.innerText;
+    if (displayPage === false && page === '') {
       setDisplay(true);
-    } else {
-      setDisplay(false);
+      setPage(target);
+    } else if (page !== '') {
+      setPage(target);
     }
   }
-  console.log('display', displayAbout);
+
+  let displayHome = () => {
+    setPage('');
+    setDisplay(false);
+  }
 
   return (
     <Body>
       <Wrapper>
-        <Title>
+        <Title onClick={displayHome}>
           A | E
         </Title>
         <UL>
@@ -61,17 +75,17 @@ const App = () => {
             <li onClick={handleDisplay}>
               About
             </li>
-            <li>
+            <li onClick={handleDisplay}>
               Projects
             </li>
-            <li>
+            <li onClick={handleDisplay}>
               Media
             </li>
           {/* </LI> */}
         </UL>
       </Wrapper>
       {/* conditional render About component: if true display / if false display nothing */}
-      {displayAbout === false ? null : <About />}
+      {setDisplay === false ? null : <Page page={page} display={displayPage}/>}
     </Body>
   )
 };
