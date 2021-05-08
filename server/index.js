@@ -19,12 +19,12 @@ app.get('/', (req, res) => {
   res.status(200).send('hello from server');
 });
 
-app.post('/repos', (req, res) => {
+app.get('/repos', (req, res) => {
   getRepos('abrahamesparza', (err, data) => {
     if (err) {
       console.log('err', err);
     } else {
-      res.status(200).send('Successful Post');
+      res.status(200).send(data);
     }
   })
 })
