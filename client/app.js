@@ -71,20 +71,17 @@ const App = () => {
           A | E
         </Title>
         <UL>
-          {/* <LI> */}
-            <li onClick={handleDisplay}>
-              About
-            </li>
-            <li onClick={handleDisplay}>
-              Projects
-            </li>
-            <li onClick={handleDisplay}>
-              Media
-            </li>
-          {/* </LI> */}
+          <li onClick={handleDisplay}>
+            About
+          </li>
+          <li onClick={handleDisplay}>
+            Projects
+          </li>
+          <li onClick={handleDisplay}>
+            Media
+          </li>
         </UL>
       </Wrapper>
-      {/* conditional render About component: if true display / if false display nothing */}
       {setDisplay === false ? null : <Page page={page} display={displayPage}/>}
     </Body>
   )

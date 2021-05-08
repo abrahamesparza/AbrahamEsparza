@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
+const db = require('../database/index');
+const { getRepos } = require('../helpers/getRepos');
 
 const port = 3000;
 
@@ -16,6 +18,16 @@ app.use(cors({
 app.get('/', (req, res) => {
   res.status(200).send('hello from server');
 });
+
+app.post('/repos', (req, res) => {
+  getRepos('abrahamesparza', (err, data) => {
+    if (err) {
+      console.log('err', err);
+    } else {
+      res.status(200).send('Successful Post');
+    }
+  })
+})
 
 app.listen(port, () => {
   console.log(`Listening at port ${port}`);
