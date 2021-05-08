@@ -31,7 +31,7 @@ const App = () => {
     color: #262626;
     text-align: center;
     font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 3s;
+    ${'' /* animation: ${FadeIn} linear 3s; */}
   `;
   const UL = styled.ul`
     display: flex;
@@ -39,7 +39,7 @@ const App = () => {
     font-size: 18px;
     color: #262626;
     font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 3s;
+    ${'' /* animation: ${FadeIn} linear 3s; */}
     justify-content: center;
     list-style-type: none;
   `;
@@ -71,15 +71,15 @@ const App = () => {
           A | E
         </Title>
         <UL>
-          <li onClick={handleDisplay}>
-            About
-          </li>
-          <li onClick={handleDisplay}>
-            Projects
-          </li>
-          <li onClick={handleDisplay}>
-            Media
-          </li>
+            <li onClick={handleDisplay}>
+              About
+            </li>
+            <li onClick={handleDisplay}>
+              Projects
+            </li>
+            <li onClick={handleDisplay}>
+              Media
+            </li>
         </UL>
       </Wrapper>
       {setDisplay === false ? null : <Page page={page} display={displayPage}/>}

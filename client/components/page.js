@@ -3,12 +3,12 @@ import About from './about';
 import Projects from './projects';
 import Media from './media';
 
-const Page = ({ page , display }) => {
+const Page = ({ page , display, repos }) => {
   if (page === 'About' && display === true) {
     return <About />
   } else if (page === 'Projects' && display === true) {
     // need to create Projects component and pass here
-    return <Projects />;
+    return <Projects repos={repos}/>;
   } else if (page === 'Media' && display === true) {
     // need to create Media component and pass here
     return <Media />;

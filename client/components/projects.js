@@ -18,13 +18,16 @@ const Projects = () => {
       opacity: 1
     }
   `;
+  const DIV = styled.div`
+    animation:${FadeIn} linear 3s;
+  `
   const UL = styled.ul`
     display: flex;
     flex-direction: column;
     font-size: 18px;
     color: #262626;
     font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 3s;
+    ${'' /* animation: ${FadeIn} linear 3s; */}
     justify-content: center;
     list-style-type: none;
   `;
@@ -32,7 +35,11 @@ const Projects = () => {
     color: #262626;
     text-align: center;
     font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 3s;
+    ${'' /* animation: ${FadeIn} linear 3s; */}
+  `
+  const Title = styled.h3`
+    color: #262626;
+    font-family: 'Abel', sans-serif;
   `
   // styles
   // functions
@@ -44,19 +51,23 @@ const Projects = () => {
     })
     .catch(err => console.log('err', err));11
   }
-  console.log('repos state: ', repos);
+
   return (
-    <div>
+    <DIV>
     <H1>PROJECTS</H1>
       <UL>
-        {repos.map(repo => (
-          <li>
-          <h3>{repo.name}</h3>
-          - {repo.description}<br/><br/>
-          </li>
-        ))}
+        {repos.map(repo => {
+          if (repo.name !== 'abrahamesparza.github.io' && repo.name !== 'front-end-interview-handbook' && repo.name !== 'react-take-home') {
+            return (
+              <li>
+              <Title>{repo.name}</Title>
+              - {repo.description}<br/><br/>
+              </li>
+            )
+          }
+        })}
       </UL>
-    </div>
+    </DIV>
   )
 }
 
