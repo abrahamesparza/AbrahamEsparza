@@ -19,8 +19,7 @@ const Projects = () => {
     }
   `;
   const DIV = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    max-width: 100%;
     animation:${FadeIn} linear 3s;
   `
   const UL = styled.ul`
