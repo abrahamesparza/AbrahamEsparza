@@ -19,6 +19,8 @@ const Projects = () => {
     }
   `;
   const DIV = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     animation:${FadeIn} linear 3s;
   `
   const UL = styled.ul`
@@ -41,6 +43,10 @@ const Projects = () => {
     color: #262626;
     font-family: 'Abel', sans-serif;
   `
+  const ATTR = styled.a`
+    color: #262626;
+    text-decoration: none;
+  `
   // styles
   // functions
   const getRepos = () => {
@@ -51,16 +57,16 @@ const Projects = () => {
     })
     .catch(err => console.log('err', err));11
   }
-
+  console.log('repos', repos)
   return (
     <DIV>
     <H1>PROJECTS</H1>
       <UL>
         {repos.map(repo => {
-          if (repo.name !== 'abrahamesparza.github.io' && repo.name !== 'front-end-interview-handbook' && repo.name !== 'react-take-home') {
+          if (repo.name !== 'abrahamesparza.github.io' && repo.name !== 'front-end-interview-handbook' && repo.name !== 'react-take-home' && repo.name !== 'front-end-interview-preparation-guide' && repo.name !== 'hrext07-my-cruddy-app') {
             return (
-              <li>
-              <Title>{repo.name}</Title>
+              <li key={repo.id}>
+              <Title> <ATTR href={repo.html_url} target='_blank'>{repo.name}</ATTR></Title>
               - {repo.description}<br/><br/>
               </li>
             )
