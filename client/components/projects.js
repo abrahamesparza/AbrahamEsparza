@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import axios from 'axios';
 
 
 const Projects = () => {
+  const [repos, setRepos] = useState([]);
+
+  useEffect(() => {
+    getRepos();
+  }, [])
+  // styles
   const FadeIn = keyframes`
     from {
       opacity: 0;
@@ -11,18 +18,44 @@ const Projects = () => {
       opacity: 1
     }
   `;
-  const Details = styled.h3`
+  const UL = styled.ul`
     display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 24px;
+    flex-direction: column;
+    font-size: 18px;
     color: #262626;
     font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 5s;
+    animation: ${FadeIn} linear 3s;
+    justify-content: center;
+    list-style-type: none;
   `;
+  const H1 = styled.h1`
+    color: #262626;
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    animation: ${FadeIn} linear 3s;
+  `
+  // styles
+  // functions
+  const getRepos = () => {
+    axios.get('http://localhost:3000/repos')
+    .then(data => {
+      let repos = data.data;
+      setRepos(repos);
+    })
+    .catch(err => console.log('err', err));11
+  }
+  console.log('repos state: ', repos);
   return (
     <div>
-      <Details>this is where I will disply my latest projects.</Details>
+    <H1>PROJECTS</H1>
+      <UL>
+        {repos.map(repo => (
+          <li>
+          <h3>{repo.name}</h3>
+          - {repo.description}<br/><br/>
+          </li>
+        ))}
+      </UL>
     </div>
   )
 }
