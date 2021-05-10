@@ -1,20 +1,21 @@
 import React from 'react';
 import About from './about';
 import Projects from './projects';
-import Media from './media';
+import Contact from './contact';
+import Landing from './landing';
 
-const Page = ({ page , display, repos }) => {
+const Page = ({ page , display, repos, FadeIn }) => {
   if (page === 'About' && display === true) {
     return <About />
   } else if (page === 'Projects' && display === true) {
     // need to create Projects component and pass here
     return <Projects repos={repos}/>;
-  } else if (page === 'Media' && display === true) {
+  } else if (page === 'Contact' && display === true) {
     // need to create Media component and pass here
-    return <Media />;
+    return <Contact />;
   }
   else {
-    return null;
+    return <Landing FadeIn={FadeIn}/>;
   }
 }
 

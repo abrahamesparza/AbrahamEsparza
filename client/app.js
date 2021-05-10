@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import styled, { keyframes } from 'styled-components';
 import Page from './components/page';
+import Navbar from './components/navbar';
+import Landing from './components/landing';
 
 const App = () => {
   let [displayPage, setDisplay] = useState(false);
   let [page, setPage] = useState('');
-  let [active, setActive] = useState(false);
 
-  useEffect(() => {
-    // nothing yet
-  }, []);
+  // useEffect(() => {
+  //   // nothing yet
+  // }, []);
 
   /* styled components */
   const FadeIn = keyframes`
@@ -20,29 +21,6 @@ const App = () => {
       opacity: 1
     }
   `
-  const Wrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 25px 0px 25px;
-  `;
-  const Title = styled.h1`
-    font-size: 48px;
-    color: #262626;
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    ${'' /* animation: ${FadeIn} linear 3s; */}
-  `;
-  const UL = styled.ul`
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
-    color: #262626;
-    font-family: 'Abel', sans-serif;
-    ${'' /* animation: ${FadeIn} linear 3s; */}
-    justify-content: center;
-    list-style-type: none;
-  `;
   const Body = styled.div`
     max-width: 100%;
     max-height: 100%;
@@ -66,23 +44,8 @@ const App = () => {
 
   return (
     <Body>
-      <Wrapper>
-        <Title onClick={displayHome}>
-          A | E
-        </Title>
-        <UL>
-            <li onClick={handleDisplay}>
-              About
-            </li>
-            <li onClick={handleDisplay}>
-              Projects
-            </li>
-            <li onClick={handleDisplay}>
-              Media
-            </li>
-        </UL>
-      </Wrapper>
-      {setDisplay === false ? null : <Page page={page} display={displayPage}/>}
+      <Navbar displayHome={displayHome} handleDisplay={handleDisplay} FadeIn={FadeIn}/>
+      {setDisplay === false ? null : <Page page={page} display={displayPage} FadeIn={FadeIn}/>}
     </Body>
   )
 };

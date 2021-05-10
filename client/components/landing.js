@@ -10,3 +10,25 @@ ideas
       my skills ?
 
 */
+import React from 'react'
+import styled, { keyframes } from 'styled-components';
+import ocean from '../../background/oceanbg.jpeg';
+
+const Landing = ({ FadeIn }) => {
+
+  const Image = styled.img`
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 500px;
+    animation: ${FadeIn} linear 3s;
+  `
+  return (
+    <div>
+      <Image src={ocean} />
+    </div>
+  )
+}
+
+export default Landing;

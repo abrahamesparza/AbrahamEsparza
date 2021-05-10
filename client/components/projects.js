@@ -9,6 +9,7 @@ const Projects = () => {
   useEffect(() => {
     getRepos();
   }, [])
+
   // styles
   const FadeIn = keyframes`
     from {
@@ -56,6 +57,7 @@ const Projects = () => {
     })
     .catch(err => console.log('err', err));11
   }
+
   console.log('repos', repos)
   return (
     <DIV>

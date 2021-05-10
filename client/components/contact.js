@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 
-const Media = () => {
+const Contact = () => {
   const FadeIn = keyframes`
     from {
       opacity: 0;
@@ -22,9 +22,9 @@ const Media = () => {
   `;
   return (
     <div>
-      <Details>this is where I will disply my media.</Details>
+      <Details>this is where I will disply my contact info.</Details>
     </div>
   )
 }
 
-export default Media;
+export default Contact;
