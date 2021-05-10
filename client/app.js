@@ -2,15 +2,10 @@ import React, {useState, useEffect} from 'react';
 import styled, { keyframes } from 'styled-components';
 import Page from './components/page';
 import Navbar from './components/navbar';
-import Landing from './components/landing';
 
 const App = () => {
   let [displayPage, setDisplay] = useState(false);
   let [page, setPage] = useState('');
-
-  // useEffect(() => {
-  //   // nothing yet
-  // }, []);
 
   /* styled components */
   const FadeIn = keyframes`

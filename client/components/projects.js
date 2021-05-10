@@ -61,7 +61,7 @@ const Projects = () => {
   console.log('repos', repos)
   return (
     <DIV>
-    <H1>PROJECTS</H1>
+    <H1>Projects</H1>
       <UL>
         {repos.map(repo => {
           if (repo.name !== 'abrahamesparza.github.io' && repo.name !== 'front-end-interview-handbook' && repo.name !== 'react-take-home' && repo.name !== 'front-end-interview-preparation-guide' && repo.name !== 'hrext07-my-cruddy-app') {

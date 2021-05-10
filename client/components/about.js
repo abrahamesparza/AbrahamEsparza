@@ -1,27 +1,17 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const About = () => {
-  const FadeIn = keyframes`
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1
-    }
-  `;
-  const Details = styled.h3`
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 24px;
+const About = ({ FadeIn }) => {
+
+  const Details = styled.h1`
     color: #262626;
+    text-align: center;
     font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 5s;
+    animation: ${FadeIn} linear 3s
   `;
   return (
     <div>
-      <Details>this is where I will write info about myself.</Details>
+      <Details>About</Details>
     </div>
   )
 }
