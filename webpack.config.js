@@ -1,3 +1,4 @@
+const { resolve } = require('path');
 const path = require('path');
 
 module.exports = {
@@ -25,5 +26,20 @@ module.exports = {
         use: 'url-loader',
       },
     ]
+  },
+  resolve: {
+    fallback: {
+      "util": false,
+      "path": false,
+      "crypto": false,
+      "buffer": false,
+      "https": false,
+      "url": false,
+      "http": false,
+      "vm": false,
+      "querystring": false,
+      "os": false,
+      "browser": false
+   },
   }
 };
