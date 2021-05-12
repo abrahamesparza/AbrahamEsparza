@@ -21,7 +21,7 @@ const Projects = () => {
   `;
   const DIV = styled.div`
     max-width: 100%;
-    animation:${FadeIn} linear 3s;
+    ${'' /* animation:${FadeIn} linear 3s; */}
   `
   const UL = styled.ul`
     display: flex;

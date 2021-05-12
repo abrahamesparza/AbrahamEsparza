@@ -8,7 +8,7 @@ const Contact = ({FadeIn}) => {
     color: #262626;
     text-align: center;
     font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 3s;
+    ${'' /* animation: ${FadeIn} linear 3s; */}
   `;
   return (
     <div>

@@ -13,7 +13,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     color: #262626;
     text-align: center;
     font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 3s;
+    ${'' /* animation: ${FadeIn} linear 3s; */}
   `;
   const UL = styled.ul`
     display: flex;
@@ -21,7 +21,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     font-size: 18px;
     color: #262626;
     font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 3s;
+    ${'' /* animation: ${FadeIn} linear 3s; */}
     justify-content: center;
     list-style-type: none;
   `;
