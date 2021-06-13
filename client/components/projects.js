@@ -50,7 +50,7 @@ const Projects = () => {
   // styles
   // functions
   const getRepos = () => {
-    axios.get('http://localhost:3000/repos')
+    axios.get('https://api.github.com/users/abrahamesparza/repos')
     .then(data => {
       let repos = data.data;
       setRepos(repos);

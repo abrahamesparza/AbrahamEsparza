@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { AutomaticPrefetchPlugin } from 'webpack';
-
 const About = ({ FadeIn }) => {
   const [feed, setFeed] = useState([]);
 
@@ -12,7 +10,7 @@ const About = ({ FadeIn }) => {
   }, []);
 
   const getInstagram = () => {
-    axios.get('https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,username,timestamp&access_token=IGQVJXVmpMaURrV1A3QWUxSUFEV3hDWEdzSkhsZA3JQNWpXNTAtZA2xiVkZADNG1nVWlDaUdzZAnN4eFRfdVA5ZAkZAfTGJzZA0w2THFzaDJ2cmI5QUFydTR4X1ZAJOGtTcG50alhjRU5tMHJaUlFnWHJBbERCcWpZAN3JBbTdmalhN'
+    axios.get(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,username,timestamp&access_token=IGQVJYVlJ5VXhBZAjgtcEhoNFhtTzBOY3BJdHMybzV4ZAS1hX2dJcjM5bktDMURpWUplS09HT1pXVHlEeDJnYU00RGFuUlgydURKWG5GVmlDYmJMVWxwanlFVzFCeXdOc0xCRUVUY2Vid0pXNXhnc1g4LUhBY2o5ZA1ZARZATNJ`
   )
     .then(res => {
       let data = res.data.data
