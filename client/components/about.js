@@ -29,7 +29,7 @@ const About = ({ FadeIn }) => {
 
   const Body = styled.div`
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
   `
   const Details = styled.h1`
     color: #262626;
@@ -42,30 +42,38 @@ const About = ({ FadeIn }) => {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     list-style-type: none;
   `
 
   const LI = styled.li`
-    width: 250px;
+    display: center;
+    textAlign: center;
+    width: 500px;
     margin: 10px;
-    border: 2px solid dodgerblue;
-    border-radius: 25%;
-    padding: 30px;
   `;
+
+  let Interests = [
+    {
+      id: 0,
+      title: '',
+      src: ''
+    }
+  ];
 
   return (
     <div>
       <Details>Hi, I'm Abraham</Details>
       <Body>
-      {/* dummy lorem ipsum data to create display */}
-      <UL>
-      {/* Display blogs of interests? or blogs I write? */}
-        <LI>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac diam bibendum velit mattis porta. Quisque eget maximus ipsum. Quisque imperdiet, ex a commodo tempor, dui nisi luctus ante, eget posuere ex arcu eu quam. Nam ut ex ut erat tempor pulvinar vel ut arcu. Integer nunc magna, lacinia quis scelerisque non, placerat nec erat. Vivamus rhoncus efficitur convallis. Sed accumsan mattis tortor a euismod. Ut ac nisl blandit, posuere nisl eu, posuere sem. Pellentesque vel mattis eros. Fusce laoreet ipsum enim, id volutpat nisi volutpat a. Nunc faucibus sed nibh eget vehicula.</LI>
-        <LI>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac diam bibendum velit mattis porta. Quisque eget maximus ipsum. Quisque imperdiet, ex a commodo tempor, dui nisi luctus ante, eget posuere ex arcu eu quam. Nam ut ex ut erat tempor pulvinar vel ut arcu. Integer nunc magna, lacinia quis scelerisque non, placerat nec erat. Vivamus rhoncus efficitur convallis. Sed accumsan mattis tortor a euismod. Ut ac nisl blandit, posuere nisl eu, posuere sem. Pellentesque vel mattis eros. Fusce laoreet ipsum enim, id volutpat nisi volutpat a. Nunc faucibus sed nibh eget vehicula.</LI>
-      </UL>
+        <UL>
+          <LI>
+            I am a Software Engineer with experience developing full stack applications from scratch using MERN Stack, and Webpack to compile my JavaScript code.<br />
+            I am currently seeking Frontend Software Engineer employment opportunites.
+          </LI>
+        </UL>
+          {/* Display blogs of interests? or blogs I write? */}
 
-      {/* instagram display code */}
+        {/* instagram display code */}
         {/* <ul style={{listStyleType: 'none'}}>{feed.map(data => {
          return (
             <li>

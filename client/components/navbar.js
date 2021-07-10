@@ -31,15 +31,18 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
         A | E
       </Title>
       <UL>
-          <li onClick={handleDisplay}>
-            About
-          </li>
-          <li onClick={handleDisplay}>
-            Projects
-          </li>
-          <li onClick={handleDisplay}>
-            Contact
-          </li>
+        <li onClick={displayHome}>
+          Home
+        </li>
+        <li onClick={handleDisplay}>
+          About
+        </li>
+        <li onClick={handleDisplay}>
+          Projects
+        </li>
+        <li onClick={handleDisplay}>
+          Contact
+        </li>
       </UL>
   </Wrapper>
   )
