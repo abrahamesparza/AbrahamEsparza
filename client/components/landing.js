@@ -13,7 +13,8 @@ ideas
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
 import { AiOutlineLinkedin } from "react-icons/fa";
-import { FaTwitter, FaLinkedinIn } from "react-icons/fa"
+import { FaTwitter, FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
+import { IconName } from "react-icons/si";
 
 const Landing = ({ FadeIn }) => {
 
@@ -43,7 +44,7 @@ const Landing = ({ FadeIn }) => {
     margin: 10px;
     padding-top: 25px;
   `;
-  const About = styled.div`
+  const Main1 = styled.div`
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -54,7 +55,12 @@ const Landing = ({ FadeIn }) => {
     fonnt-size: 18px;
     font-family: 'Abel', sans-serif;
     animation: ${FadeIn} linear 3s;
-  `
+  `;
+  const Main2 = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  `;
   return (
     <div>
     <Body>
@@ -67,17 +73,19 @@ const Landing = ({ FadeIn }) => {
             Actively seeking Software Engineer employment opportunites.
           </LI>
         </UL>
-        <About>
+        <Main1>
           <Details>
             Test text
           </Details>
-        </About>
-        <div>
+        </Main1>
+        <Main2>
           <Details>test text 2</Details>
-        </div>
+        </Main2>
         <div>
-          <FaTwitter/>
           <FaLinkedinIn/>
+          <FaGithub/>
+          <FaTwitter/>
+          <FaInstagram/>
         </div>
       </Body>
     </div>

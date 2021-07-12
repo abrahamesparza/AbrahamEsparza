@@ -34,15 +34,15 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
         <li onClick={displayHome}>
           Home
         </li>
-        <li onClick={handleDisplay}>
+        {/* <li onClick={handleDisplay}>
           About
-        </li>
+        </li> */}
         <li onClick={handleDisplay}>
           Projects
         </li>
-        <li onClick={handleDisplay}>
+        {/* <li onClick={handleDisplay}>
           Contact
-        </li>
+        </li> */}
       </UL>
   </Wrapper>
   )
