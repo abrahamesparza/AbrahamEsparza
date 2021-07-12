@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
-
+  console.log('repos', repos);
   useEffect(() => {
     getRepos();
   }, [])
@@ -28,20 +28,17 @@ const Projects = () => {
   `
 
     const LI = styled.li`
-      opacity: 50%;
       margin: 3px;
       padding-left: 15px;
       ${'' /* text-align: center; */}
-      transition: 1.5s;
+      transition: 1.0s;
       margin-right: 40px;
       border-radius: 5px;
+      color: #262626;
       &:hover {
         background-color: #8AB3FF;
         color: white;
-        font-size: 20px;
-        ${Title} {
-          font-size: 22px;
-        }
+        opacity: 50%;
       }
     `
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+
 const About = ({ FadeIn }) => {
   const [feed, setFeed] = useState([]);
 
@@ -30,59 +31,41 @@ const About = ({ FadeIn }) => {
   const Body = styled.div`
     display: grid;
     grid-template-columns: auto;
-  `
-  const Details = styled.h1`
-    color: #262626;
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    ${'' /* animation: ${FadeIn} linear 3s; */}
+    grid-template-rows: 300px 300px 300px;
+    background-color: #262626
   `;
-
-  const UL = styled.ul`
+  const Main1 = styled.div`
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
-    list-style-type: none;
-  `
-
-  const LI = styled.li`
-    display: center;
-    textAlign: center;
-    width: 500px;
-    margin: 10px;
   `;
-
-  let Interests = [
-    {
-      id: 0,
-      title: '',
-      src: ''
-    }
-  ];
+  const Details = styled.p`
+    display: center;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Abel', sans-serif;
+    animation: ${FadeIn} linear 3s;
+    color: #F0F0F0;
+  `;
 
   return (
-    <div>
+    <div style={{backgroundColor: '#262626'}}>
       <Details>Hi, I'm Abraham</Details>
       <Body>
-        <UL>
-          <LI>
-            I am a Software Engineer with experience developing full stack applications from scratch using MERN Stack, and Webpack to compile my JavaScript code.<br />
-            I am currently seeking Frontend Software Engineer employment opportunites.
-          </LI>
-        </UL>
-          {/* Display blogs of interests? or blogs I write? */}
-
-        {/* instagram display code */}
-        {/* <ul style={{listStyleType: 'none'}}>{feed.map(data => {
-         return (
-            <li>
-            <img style={{display: 'block', width: '540px', height: '540px', marginLeft: 'auto', marginRight: 'auto'}} src={data.media_url} /><br/>
-            <p style={{textAlign: 'center'}}>{data.caption}</p>
-            </li>
-         )
-        })}
-        </ul> */}
+      <Main1>
+          <Details>
+            Prior to writing code, I spent most of my time photographing concerts,<br/>nature, people, being creative capturing long exposure images, and producing music.<br/>
+            I have a natural force within me that wants to create, so create is what I do.<br/>
+            I have never been one to let barriers stop me from doing something new.<br/>
+            Whether the barrier is a skill I lack, or a tool I don't have, I always find a way.<br/>
+          </Details>
+        </Main1>
+        <Main1>
+          <Details>
+            My journey as a Software Engineer began in 2016, as I began to dabble with<br/>HTML, CSS, and Javascript on Codecademy.<br/>
+            Codecademy is the platform I used to build the fundamentals of web development
+          </Details>
+        </Main1>
       </Body>
     </div>
   )

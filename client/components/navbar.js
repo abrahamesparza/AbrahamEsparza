@@ -7,10 +7,11 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 25px 0px 25px;
+    background-color: #262626;
   `;
   const Title = styled.h1`
     font-size: 48px;
-    color: #262626;
+    color: #F0F0F0;
     text-align: center;
     font-family: 'Abel', sans-serif;
     ${'' /* animation: ${FadeIn} linear 3s; */}
@@ -19,7 +20,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    color: #262626;
+    color: #F0F0F0;
     font-family: 'Abel', sans-serif;
     ${'' /* animation: ${FadeIn} linear 3s; */}
     justify-content: center;
@@ -34,15 +35,12 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
         <li onClick={displayHome}>
           Home
         </li>
-        {/* <li onClick={handleDisplay}>
+        <li onClick={handleDisplay}>
           About
-        </li> */}
+        </li>
         <li onClick={handleDisplay}>
           Projects
         </li>
-        {/* <li onClick={handleDisplay}>
-          Contact
-        </li> */}
       </UL>
   </Wrapper>
   )

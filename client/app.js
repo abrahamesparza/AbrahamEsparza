@@ -38,7 +38,7 @@ const App = () => {
   }
 
   return (
-    <Body>
+    <Body style={{backgroundColor: '#262626'}}>
       <Navbar displayHome={displayHome} handleDisplay={handleDisplay} FadeIn={FadeIn}/>
       {setDisplay === false ? null : <Page page={page} display={displayPage} FadeIn={FadeIn}/>}
     </Body>
