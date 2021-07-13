@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import Footer from './footer.js';
 import axios from 'axios';
 
 const Projects = () => {
@@ -23,7 +24,7 @@ const Projects = () => {
     ${'' /* animation:${FadeIn} linear 3s; */}
   `
   const Title = styled.h3`
-    color: #262626;
+    color: #F0F0F0;
     font-family: 'Abel', sans-serif;
   `
 
@@ -34,10 +35,10 @@ const Projects = () => {
       transition: 1.0s;
       margin-right: 40px;
       border-radius: 5px;
-      color: #262626;
+      color: #F0F0F0;
       &:hover {
         background-color: #8AB3FF;
-        color: white;
+        color: #262626;
         opacity: 50%;
       }
     `
@@ -46,7 +47,7 @@ const Projects = () => {
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    color: #262626;
+    color: #F0F0F0;
     font-family: 'Abel', sans-serif;
     ${'' /* animation: ${FadeIn} linear 3s; */}
     justify-content: center;
@@ -54,13 +55,13 @@ const Projects = () => {
     }
   `;
   const H1 = styled.h1`
-    color: #262626;
+    color: #F0F0F0;
     text-align: center;
     font-family: 'Abel', sans-serif;
     ${'' /* animation: ${FadeIn} linear 3s; */}
   `
   const ATTR = styled.a`
-    color: #262626;
+    color: #F0F0F0;
     text-decoration: none;
   `
   // styles
@@ -90,6 +91,7 @@ const Projects = () => {
           }
         })}
       </UL>
+      <Footer/>
     </DIV>
   )
 }

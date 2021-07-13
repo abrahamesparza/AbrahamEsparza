@@ -12,8 +12,8 @@ ideas
 */
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
-import { AiOutlineLinkedin } from "react-icons/fa";
-import { FaLinkedinIn, FaInstagram, FaGithub, FaMedium, FaLightbulb } from "react-icons/fa";
+import Footer from './footer.js';
+import { FaLightbulb } from 'react-icons/fa';
 
 const Landing = ({ FadeIn }) => {
   const Intro = styled.h1`
@@ -25,27 +25,9 @@ const Landing = ({ FadeIn }) => {
   const Body = styled.div`
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 200px 200px auto;
+    grid-template-rows: 300px 200px auto;
     ${'' /* color: #F0F0F0; */}
     background-color: #262626;
-  `;
-  const UL = styled.ul`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style-type: none;
-  `;
-  const LI = styled.li`
-    display: center;
-    text-align: center;
-    font-size: 28px;
-    font-family: 'Abel', sans-serif;
-    margin: 10px;
-    padding-top: 25px;
-    color: #F0F0F0;
-    animation: ${FadeIn} linear 3.5s;
-    padding-top: 50px;
   `;
   const H2 = styled.h2`
     display: center;
@@ -55,34 +37,8 @@ const Landing = ({ FadeIn }) => {
     margin: 10px;
     padding-top: 25px;
     color: #F0F0F0;
-    animation: ${FadeIn} linear 5.0s;
+    animation: ${FadeIn} linear 4.0s;
     font-family: 'Abel', sans-serif;
-  `;
-  const Main1 = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  `;
-  const Details = styled.p`
-    display: center;
-    text-align: center;
-    font-size: 28px;
-    font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 3s;
-    color: #262626;
-  `;
-  const Main2 = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  `;
-  const Footer = styled.footer`
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    height: 100px;
-    padding-top: 100px;
-    background-color: #C6C6C6
   `;
   const A = styled.a`
     color: #F0F0F0;
@@ -92,41 +48,38 @@ const Landing = ({ FadeIn }) => {
       font-size: 32px;
       transition: 0.5s;
     }
-  `
+  `;
+  // const UL = styled.ul`
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-evenly;
+  //   list-style: none;
+  // `;
+  // const LI = styled.li`
+  //   font-family: 'Abel', sans-serif;
+  //   color: #F0F0F0;
+  //   font-size: 24px;
+  //   padding-bottom: 25px;
+  // `;
   return (
     <div>
     <Body>
-      <Intro>
+      {/* <Intro>
         Full Stack Developer
-      </Intro>
-        <UL>
-        <LI>
+      </Intro> */}
+        <H2>
           Converting ideas <FaLightbulb style={{color: '#FFF57A'}}/> into a digital experience.
-        </LI><br/>
-          {/* <LI>
-            Developing full stack applications using MERN.<br/><br/><br/><br/>
-            Actively seeking Software Engineer employment opportunites.
-          </LI> */}
-        </UL>
-          <H2>
-            <A href='mailto:abrahamesparza.dev@gmail.com'>
-              Available for hire.
-            </A>
-          </H2>
-        <Footer>
-          <a href='https://www.linkedin.com/in/abrahamesparza/' target='_blank'>
-            <FaLinkedinIn style={{fontSize: '24px', color: '#2867B2' }}/>
-          </a>
-          <a href='https://github.com/abrahamesparza' target='_blank'>
-            <FaGithub style={{fontSize: '24px', color: '#211F1F' }}/>
-          </a>
-          <a href='https://abrahammesparza.medium.com/' target='_blank'>
-            <FaMedium style={{fontSize: '24px', color: '#262626' }}/>
-          </a>
-          <a href='https://www.instagram.com/abrahammesparza/' target='_blank'>
-            <FaInstagram style={{fontSize: '24px', color: '#5851db' }}/>
-          </a>
-        </Footer>
+          <h4 style={{display: 'center', textAlign: 'center', fontSize: '20px', fontFamily: 'Abel, sans-serif', color: '#F0F0F0', paddingTop: '70px'}}>
+            I am a software engineer with experience in developing full stack applications<br/>
+            from scratch using the MERN stack.
+          </h4>
+        </H2>
+        <H2>
+          <A href='mailto:abrahamesparza.dev@gmail.com'>
+            Available for hire.
+          </A>
+        </H2>
+        <Footer/>
       </Body>
     </div>
   )

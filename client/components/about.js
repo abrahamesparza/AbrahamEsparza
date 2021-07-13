@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Footer from './footer.js';
 import axios from 'axios';
 
 const About = ({ FadeIn }) => {
@@ -31,7 +32,7 @@ const About = ({ FadeIn }) => {
   const Body = styled.div`
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 300px 300px 300px;
+    grid-template-rows: auto 400px 100px auto;
     background-color: #262626
   `;
   const Main1 = styled.div`
@@ -42,12 +43,11 @@ const About = ({ FadeIn }) => {
   const Details = styled.p`
     display: center;
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
     font-family: 'Abel', sans-serif;
     animation: ${FadeIn} linear 3s;
     color: #F0F0F0;
   `;
-
   return (
     <div style={{backgroundColor: '#262626'}}>
       <Details>Hi, I'm Abraham</Details>
@@ -62,10 +62,13 @@ const About = ({ FadeIn }) => {
         </Main1>
         <Main1>
           <Details>
-            My journey as a Software Engineer began in 2016, as I began to dabble with<br/>HTML, CSS, and Javascript on Codecademy.<br/>
-            Codecademy is the platform I used to build the fundamentals of web development
+            My journey as a Software Engineer began in 2016, as I began to dabble with<br/>HTML, CSS, and Javascript on Codecademy.
+            Codecademy is the platform I<br/>used to establish my fundamental skills of web development.
+            I wanted a<br/>challenge, so after completing Codecademy and resources from other online <br/>platforms, I decided to take on a more challenging route. It was at this point in my<br/>life where I decided I was going to join Hack Reactor. Being admitted to Hack<br/>
+            Reactor was not a walk in the park. Prior to being accepted, I failed two interviews.<br/>Long story short, I persevered through all the obstacles I encountered in my personal<br/>life and on my journey to becoming a software engineer. From logging 'Hello, World'<br/>to building full stack web apps utilizing HTML, CSS, VanillaJS,<br/>ReactJS, NodeJS, ExpressJS, MongoDB/MySQL, Webpack, Babel, Bcrypt, JWT, and more.
           </Details>
         </Main1>
+        <Footer />
       </Body>
     </div>
   )
