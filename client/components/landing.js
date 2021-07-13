@@ -69,8 +69,8 @@ const Landing = ({ FadeIn }) => {
       </Intro> */}
         <H2>
           Converting ideas <FaLightbulb style={{color: '#FFF57A'}}/> into a digital experience.
-          <h4 style={{display: 'center', textAlign: 'center', fontSize: '20px', fontFamily: 'Abel, sans-serif', color: '#F0F0F0', paddingTop: '70px'}}>
-            I am a software engineer with experience in developing full stack applications<br/>
+          <h4 style={{display: 'center', textAlign: 'center', fontSize: '20px', fontFamily: 'Abel, sans-serif', color: '#F0F0F0', paddingTop: '50px'}}>
+            I am a software engineer with experience in developing Full Stack Applications<br/>
             from scratch using the MERN stack.
           </h4>
         </H2>

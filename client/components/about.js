@@ -32,8 +32,8 @@ const About = ({ FadeIn }) => {
   const Body = styled.div`
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 400px 100px auto;
-    background-color: #262626
+    grid-template-rows: auto 500px auto;
+    background-color: #262626;
   `;
   const Main1 = styled.div`
     display: flex;
