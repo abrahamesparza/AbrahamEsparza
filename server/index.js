@@ -4,14 +4,14 @@ const path = require('path');
 const cors = require('cors');
 const db = require('../database/index');
 
-const port = 3000;
+const port = 5000;
 
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join('public')));
 app.use(cors({
   credentials: true,
-  origin: 'localhost:3000'
+  origin: 'localhost:5000'
 }));
 
 app.get('/', (req, res) => {
