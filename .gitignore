@@ -1,4 +1,4 @@
 node_modules
 public/bundle.js
-database/uri.js
+# database/uri.js
 config.js
