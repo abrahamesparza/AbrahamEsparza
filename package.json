@@ -4,7 +4,7 @@
   "description": "repo for my updated personal website",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "nodemon server/index.js && webpack --mode=development --watch",
     "build": "webpack --mode=development --watch"
   },
   "author": "abraham esparza",
