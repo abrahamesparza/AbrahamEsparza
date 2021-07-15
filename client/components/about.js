@@ -34,11 +34,33 @@ const About = ({ FadeIn }) => {
     grid-template-columns: auto;
     grid-template-rows: auto 500px auto;
     background-color: #262626;
+    @media (max-width: 500px) {
+      grid-template-rows: auto 200px auto;
+    };
+    @media (max-width: 900px) {
+      grid-template-rows: auto 200px auto;
+    }
+
   `;
   const Main1 = styled.div`
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    @media (max-width: 500px) {
+      overflow: scroll;
+      width:400px;
+      height: 600px;
+      margin-left: 7px;
+      margin-right:5px;
+    }
+    @media (min-width: 1400px) {
+      grid-template-rows: auto 500px auto;
+      background-color:red;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   `;
   const Details = styled.p`
     display: center;
@@ -59,8 +81,8 @@ const About = ({ FadeIn }) => {
             I have never been one to let barriers stop me from doing something new.<br/>
             Whether the barrier is a skill I lack, or a tool I don't have, I always find a way.<br/>
           </Details>
-        </Main1>
-        <Main1>
+        {/* </Main1>
+        <Main2> */}
           <Details>
             My journey as a Software Engineer began in 2016, as I began to dabble with<br/>HTML, CSS, and Javascript on Codecademy.
             Codecademy is the platform I<br/>used to establish my fundamental skills of web development.
