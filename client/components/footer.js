@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
-import { FaLinkedinIn, FaInstagram, FaGithub, FaMedium } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaGithub, FaMedium, FaFilePdf, FaFile } from "react-icons/fa";
+import pdf from './pdf/AbrahamEsparza.pdf'
 
 const Footer = () => {
 
@@ -26,6 +27,9 @@ const Footer = () => {
       </a>
       <a href='https://www.instagram.com/abrahammesparza/' target='_blank'>
         <FaInstagram style={{fontSize: '24px', color: '#5851db' }}/>
+      </a>
+      <a src={pdf} type='application/octet-stream' download="AbrahamEsparza_Resume" target='_blank'>
+        <FaFilePdf style={{fontSize: '24px', color: '#262626' }}/>
       </a>
     </Foot>
   )
