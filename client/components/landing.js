@@ -25,20 +25,29 @@ const Landing = ({ FadeIn }) => {
   const Body = styled.div`
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 300px 200px auto;
-    ${'' /* color: #F0F0F0; */}
+    grid-template-rows: auto 250px 150px;
     background-color: #262626;
+    @media (max-width: 500px) {
+      grid-template-rows: auto 300px 200px;
+      margin: auto;
+    }
   `;
   const H2 = styled.h2`
-    display: center;
-    text-align: center;
-    font-size: 28px;
-    ${'' /* width: 500px; */}
-    margin: 10px;
-    padding-top: 25px;
+    ${'' /* display: center;
+    text-align: center; */}
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: 24px;
+    ${'' /* width: 600px; */}
+    margin: auto;
     color: #F0F0F0;
     animation: ${FadeIn} linear 4.0s;
     font-family: 'Abel', sans-serif;
+    @media (max-width: 500px) {
+      width: 350px;
+      margin: auto
+    }
   `;
   const A = styled.a`
     color: #F0F0F0;
@@ -47,6 +56,9 @@ const Landing = ({ FadeIn }) => {
       color: #8CB9FF;
       font-size: 32px;
       transition: 0.5s;
+    }
+    @media (max-width: 500px) {
+      color: #8CB9FF;
     }
   `;
   // const UL = styled.ul`
@@ -64,19 +76,18 @@ const Landing = ({ FadeIn }) => {
   return (
     <div>
     <Body>
-      {/* <Intro>
-        Full Stack Developer
-      </Intro> */}
+      <Intro>
+        Converting ideas <FaLightbulb style={{color: '#FFF57A'}}/> into a digital experience.
+      </Intro>
         <H2>
-          Converting ideas <FaLightbulb style={{color: '#FFF57A'}}/> into a digital experience.
-          <h4 style={{display: 'center', textAlign: 'center', fontSize: '20px', fontFamily: 'Abel, sans-serif', color: '#F0F0F0', paddingTop: '50px'}}>
-            I am a software engineer with experience in developing Full Stack Applications<br/>
+          {/* <h4 style={{display: 'center', textAlign: 'center', fontSize: '20px', fontFamily: 'Abel, sans-serif', color: '#F0F0F0', paddingTop: '50px'}}> */}
+            Software engineer with experience in developing Full Stack Applications
             from scratch using the MERN stack.
-          </h4>
+          {/* </h4> */}
         </H2>
         <H2>
           <A href='mailto:abrahamesparza.dev@gmail.com'>
-            Available for hire.
+            Send me an email.
           </A>
         </H2>
         <Footer/>
