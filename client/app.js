@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import styled, { keyframes } from 'styled-components';
 import Page from './components/page';
 import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 const App = () => {
   let [displayPage, setDisplay] = useState(false);
@@ -41,6 +42,7 @@ const App = () => {
     <Body style={{backgroundColor: '#262626'}}>
       <Navbar displayHome={displayHome} handleDisplay={handleDisplay} FadeIn={FadeIn}/>
       {setDisplay === false ? null : <Page page={page} display={displayPage} FadeIn={FadeIn}/>}
+      <Footer />
     </Body>
   )
 };

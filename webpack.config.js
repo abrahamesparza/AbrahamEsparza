@@ -25,14 +25,6 @@ module.exports = {
         test:  /\.(jpe?g|pdf|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
         use: 'url-loader',
       },
-      {
-        test: /\.(png|svg|jpg|gif|pdf)$/,
-        use: 'file-loader',
-        options: {
-          name: pdf
-        }
-      },
-
     ]
   },
   resolve: {

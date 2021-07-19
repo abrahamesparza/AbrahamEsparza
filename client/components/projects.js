@@ -91,7 +91,6 @@ const Projects = () => {
           }
         })}
       </UL>
-      <Footer/>
     </DIV>
   )
 }
