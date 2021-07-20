@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { FaDumbbell, FaRunning, FaBookReader, FaHiking, FaGuitar, FaSwimmer, FaBaseballBall } from 'react-icons/fa';
+import { FaDumbbell, FaRunning, FaBookReader, FaHiking, FaGuitar, FaSwimmer, FaBaseballBall, FaChild, FaDev } from 'react-icons/fa';
+import img from './image/albert_einstein.jpeg';
 
 const About = ({ FadeIn }) => {
   const [feed, setFeed] = useState([]);
@@ -32,10 +33,10 @@ const About = ({ FadeIn }) => {
   const Body = styled.div`
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto 300px;
+    grid-template-rows: auto 400px 200px;
     background-color: #262626;
     @media (max-width: 500px) {
-      grid-template-rows: auto auto auto 300px;
+      grid-template-rows: auto 500px 100px;
     }
   `;
 
@@ -44,6 +45,7 @@ const About = ({ FadeIn }) => {
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+    animation: ${FadeIn} linear 3s;
     @media (max-width: 500px) {
       margin: auto;
       ${'' /* width: 385px; */}
@@ -60,10 +62,9 @@ const About = ({ FadeIn }) => {
   `;
 
   const Services = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    flex-direction: flex-start;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
   `
 
   const Details = styled.p`
@@ -76,59 +77,79 @@ const About = ({ FadeIn }) => {
   `;
 
   const UL = styled.ul`
-    display: flex;
-    flex-flow: row wrap;
-    flex-direction: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
     margin: auto;
-    ${'' /* padding-right: 10px; */}
     list-style: none;
-    ${'' /* width: 700px;
-    height: */}
+    width: 900px;
     @media (max-width: 500px) {
-      ${'' /* width: 385px; */}
-      margin-right: 25px;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto auto auto;
+      width: 300px;
     }
-    background-color: #6d74fc;
   `;
   const LI = styled.li`
     display: flex;
-    flex-flow: row wrap;
-    flex-direction: flex-start;
-    justify-content: space-evenly;
-    paddinng: 10%;
+    flex-flow: column wrap;
+    justify-content: center;
+    color: #F0F0F0;
+    font-size: 20px;
+    margin: auto;
+    padding: 5%;
+    font-family: 'Abel', sans-serif;
+    @media (max-width: 500px) {
+      flex-flow: column wrap;
+      margin-left: 15%;
+      width: 250px;
+    }
   `
-  let icons = [<FaDumbbell style={{fontSize: '48px', color: '#F0F0F0'}}/>,
+
+  const QuoteBlock = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: ${FadeIn} linear 3s;
+
+  `;
+
+  let icons = [
                <FaRunning style={{fontSize: '48px', color: '#F0F0F0'}}/>,
-                <FaBookReader style={{fontSize: '48px', color: '#F0F0F0'}}/>,
-                <FaHiking style={{fontSize: '48px', color: '#F0F0F0'}}/>,
-                <FaBaseballBall style={{fontSize: '48px', color: '#F0F0F0'}}/>,
-                <FaGuitar style={{fontSize: '48px', color: '#F0F0F0'}}/>,
                 <FaSwimmer style={{fontSize: '48px', color: '#F0F0F0'}}/>
               ]
   return (
     // <div style={{backgroundColor: '#262626'}}>
     <Body>
       <Details>Hi, I'm Abraham</Details>
-      <Main1>
-        <Details>
-          Full-time Father & Husband<br/>
-          Part-time T-Ball Coach<br/>
-        </Details>
+        <Main1>
+          <UL>
+            <LI>
+              Full Time Father <FaChild style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
+            </LI>
+            <LI>
+              Full Stack Developer <FaDev style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
+            </LI>
+            <LI>
+              Daily Strength Trainer.<FaDumbbell style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
+            </LI>
+          </UL>
+          <UL>
+            <LI>
+              Weekend T-Ball Coach.<FaBaseballBall style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
+            </LI>
+            <LI>
+              Avid Reader.<FaBookReader style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
+            </LI>
+            <LI>
+              Meditative Runner.<FaRunning style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
+            </LI>
+          </UL>
         </Main1>
-        <Details>
-          Hobbies
-        </Details>
-        {/* need to refactor this code */}
-        <Services>
-          {/* <UL>
-            <LI> */}
-              {icons.map(icon => (
-                icon
-              ))}
-            {/* </LI>
-          {/* </UL> */}
-        </Services>
+        <QuoteBlock>
+            <Details>
+              "Life is like a bicycle. To keep your balance you must keep moving."<br/>- Albert Einstein
+            </Details>
+          </QuoteBlock>
       </Body>
   )
 }
