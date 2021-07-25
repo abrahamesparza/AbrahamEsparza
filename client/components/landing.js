@@ -26,12 +26,14 @@ const Landing = ({ FadeIn }) => {
   const Body = styled.div`
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 200px 100px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 150px;
     background-color: #262626;
     ${'' /* margin-top: 50px; */}
     @media (max-width: 500px) {
-      ${'' /* grid-template-rows: auto auto 300px; */}
-      ${'' /* margin: auto; */}
+      grid-template-rows: auto auto 300px;
+      margin: auto;
+      grid-gap: 50px;
     }
   `;
   const H2 = styled.h2`
