@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import { FaDumbbell, FaRunning, FaBookReader, FaHiking, FaGuitar, FaSwimmer, FaBaseballBall, FaChild, FaDev } from 'react-icons/fa';
-import img from './image/albert_einstein.jpeg';
 
 const About = ({ FadeIn }) => {
   const [feed, setFeed] = useState([]);
@@ -34,9 +33,10 @@ const About = ({ FadeIn }) => {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto 400px 200px;
-    background-color: #262626;
+    ${'' /* grid-template-rows: repeat(3, 1fr); */}
     @media (max-width: 500px) {
-      grid-template-rows: auto 500px 100px;
+      ${'' /* grid-template-columns: repeat(1,) */}
+      ${'' /* grid-template-rows: auto 300px 100px; */}
     }
   `;
 
@@ -56,15 +56,16 @@ const About = ({ FadeIn }) => {
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: center;
-      font-size: 20px
-      color: green;
+      font-size: 20px;
     }
   `;
 
-  const Services = styled.div`
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+  const Intro = styled.h1`
+    display: center;
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    animation: ${FadeIn} linear 3s;
+    color: #F0F0F0;
   `
 
   const Details = styled.p`
@@ -81,46 +82,42 @@ const About = ({ FadeIn }) => {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
     margin: auto;
+    ${'' /* overflow: scroll; */}
+    ${'' /* margin: 10% 35% 0% 25%; */}
     list-style: none;
     width: 900px;
     @media (max-width: 500px) {
       grid-template-columns: auto;
       grid-template-rows: auto auto auto auto auto auto;
       width: 300px;
+      overflow: scroll;
+      height: 560px;
     }
   `;
   const LI = styled.li`
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
     color: #F0F0F0;
     font-size: 20px;
-    margin: auto;
+    margin: 5%;
     padding: 5%;
+    border: 1px solid black;
+    background-color: #6A507C;
+    border-radius:  25% 10%;
     font-family: 'Abel', sans-serif;
+    width: 200px;
     @media (max-width: 500px) {
       flex-flow: column wrap;
-      margin-left: 15%;
-      width: 250px;
+      ${'' /* margin-left: 15%; */}
+      width: 200px;
     }
   `
-
-  const QuoteBlock = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: ${FadeIn} linear 3s;
-
-  `;
-
-  let icons = [
-               <FaRunning style={{fontSize: '48px', color: '#F0F0F0'}}/>,
-                <FaSwimmer style={{fontSize: '48px', color: '#F0F0F0'}}/>
-              ]
   return (
     // <div style={{backgroundColor: '#262626'}}>
     <Body>
-      <Details>Hi, I'm Abraham</Details>
+      <Intro>Hi, I'm Abraham</Intro>
         <Main1>
           <UL>
             <LI>
@@ -132,8 +129,8 @@ const About = ({ FadeIn }) => {
             <LI>
               Daily Strength Trainer.<FaDumbbell style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
             </LI>
-          </UL>
-          <UL>
+          {/* </UL> */}
+          {/* <UL> */}
             <LI>
               Weekend T-Ball Coach.<FaBaseballBall style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
             </LI>
@@ -145,11 +142,6 @@ const About = ({ FadeIn }) => {
             </LI>
           </UL>
         </Main1>
-        <QuoteBlock>
-            <Details>
-              "Life is like a bicycle. To keep your balance you must keep moving."<br/>- Albert Einstein
-            </Details>
-          </QuoteBlock>
       </Body>
   )
 }

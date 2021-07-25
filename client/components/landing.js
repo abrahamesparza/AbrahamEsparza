@@ -33,7 +33,7 @@ const Landing = ({ FadeIn }) => {
     @media (max-width: 500px) {
       grid-template-rows: auto auto 300px;
       margin: auto;
-      grid-gap: 50px;
+      grid-gap: 60px;
     }
   `;
   const H2 = styled.h2`
