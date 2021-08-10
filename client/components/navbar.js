@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { FiMenu } from 'react-icons/fi';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
+  const [menu, setMenu] = useState(false);
+
+  useEffect(() => {
+
+  }, []);
+
+  const handleMenu = () => {
+    if (!menu) {
+      setMenu(true);
+    } else {
+      setMenu(false)
+    }
+  }
+
   const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
@@ -26,24 +42,48 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     justify-content: center;
     list-style-type: none;
   `;
-  return (
-    <Wrapper>
-      <Title onClick={displayHome}>
+
+  if (!menu) {
+    return (
+      <Wrapper>
+        <Title onClick={displayHome}>
         A | E
-      </Title>
-      <UL>
-        <li onClick={displayHome}>
-          Home
-        </li>
-        <li onClick={handleDisplay}>
-          About
-        </li>
-        <li onClick={handleDisplay}>
-          Projects
-        </li>
-      </UL>
-  </Wrapper>
-  )
+        </Title>
+        <FiMenu
+          style={{
+          display: 'flex',
+          flexDirection: 'column',
+          marginTop: '45px',
+          color: '#F0F0F0',
+          fontSize: '36px',
+          textAlign: 'center',
+          }}
+          onClick={handleMenu}
+          />
+      </Wrapper>
+    )
+  }
+  else {
+    return (
+      <Wrapper>
+        <Title onClick={displayHome}>
+          A | E
+        </Title>
+        <UL>
+        <AiOutlineCloseCircle onClick={handleMenu}/>
+          <li onClick={displayHome}>
+            Home
+          </li>
+          <li onClick={handleDisplay}>
+            About
+          </li>
+          <li onClick={handleDisplay}>
+            Projects
+          </li>
+        </UL>
+    </Wrapper>
+    )
+  }
 }
 
 export default Navbar;
