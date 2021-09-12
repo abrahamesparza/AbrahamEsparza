@@ -75,7 +75,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
         <UL>
         <AiOutlineCloseCircle onClick={handleMenu}/>
         {list.map(item => (
-          <li onClick={displayHome}>{item}</li>
+          <li onClick={handleDisplay}>{item}</li>
         ))}
         </UL>
     </Wrapper>
