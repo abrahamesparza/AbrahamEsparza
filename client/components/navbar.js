@@ -16,6 +16,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     } else {
       setMenu(false)
     }
+    console.log('list', list);
   }
 
   const Wrapper = styled.div`
@@ -42,6 +43,8 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     justify-content: center;
     list-style-type: none;
   `;
+
+  const list = ['Home', 'About', 'Projects'];
 
   if (!menu) {
     return (
@@ -71,15 +74,9 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
         </Title>
         <UL>
         <AiOutlineCloseCircle onClick={handleMenu}/>
-          <li onClick={displayHome}>
-            Home
-          </li>
-          <li onClick={handleDisplay}>
-            About
-          </li>
-          <li onClick={handleDisplay}>
-            Projects
-          </li>
+        {list.map(item => (
+          <li onClick={displayHome}>{item}</li>
+        ))}
         </UL>
     </Wrapper>
     )
