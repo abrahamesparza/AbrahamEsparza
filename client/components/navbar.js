@@ -23,11 +23,11 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 25px 0px 25px;
-    background-color: #262626;
+    background-color: #e3e3e3;
   `;
   const Title = styled.h1`
     font-size: 48px;
-    color: #F0F0F0;
+    color: #262626;
     text-align: center;
     font-family: 'Abel', sans-serif;
     ${'' /* animation: ${FadeIn} linear 3s; */}
@@ -36,7 +36,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    color: #F0F0F0;
+    color: #262626;
     font-family: 'Abel', sans-serif;
     ${'' /* animation: ${FadeIn} linear 3s; */}
     justify-content: center;
@@ -54,7 +54,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
           display: 'flex',
           flexDirection: 'column',
           marginTop: '45px',
-          color: '#F0F0F0',
+          color: '#262626',
           fontSize: '36px',
           textAlign: 'center',
           }}

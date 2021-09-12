@@ -1,34 +1,22 @@
-// build landing page for website
-/*
-ideas
-  image of someone or something that inspires me ?
-  unsplash techie background ?
-  interactive game ?
-  css breathing effect with
-    left to right transition list of
-      my values ?
-      my skills ?
-
-*/
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
-import Footer from './footer.js';
-import { FaLightbulb } from 'react-icons/fa';
 
 const Landing = ({ FadeIn }) => {
   const Intro = styled.h1`
     text-align: center;
     font-family: 'Abel', sans-serif;
     animation: ${FadeIn} linear 1.5s;
-    color: #F0F0F0;
+    color: #262626;
     ${'' /* margin-top: 25px; */}
   `;
   const Body = styled.div`
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 150px;
-    background-color: #262626;
+    ${'' /* grid-gap: 150px; */}
+    background-color: #e3e3e3;
+    min-height: 100vh;
+    height: 100vh;
     ${'' /* margin-top: 50px; */}
     @media (max-width: 500px) {
       grid-template-rows: auto auto 300px;
@@ -37,12 +25,11 @@ const Landing = ({ FadeIn }) => {
     }
   `;
   const H2 = styled.h2`
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    font-size: 24px;
+    display: center;
+    textAlign: center;
+    font-size: 28px;
     margin: auto;
-    color: #F0F0F0;
+    color: #262626;
     animation: ${FadeIn} linear 4.0s;
     font-family: 'Abel', sans-serif;
     @media (max-width: 500px) {
@@ -50,12 +37,30 @@ const Landing = ({ FadeIn }) => {
       margin: auto
     }
   `;
+
+  const Title = styled.h2`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: 36px;
+    margin: auto;
+    padding-top: 5%;
+    color: #262626;
+    animation: ${FadeIn} linear 4.0s;
+    font-family: 'Abel', sans-serif;
+    width: 500px;
+    @media (max-width: 500px) {
+      width: 350px;
+      margin: auto
+    }
+  `;
+
   const A = styled.a`
-    color: #F0F0F0;
+    color: #262626;
     text-decoration: none;
     &:hover {
       color: #8CB9FF;
-      font-size: 32px;
+      font-size: 28px;
       transition: 0.5s;
     }
     @media (max-width: 500px) {
@@ -64,16 +69,12 @@ const Landing = ({ FadeIn }) => {
   `;
   return (
     <Body>
-      <Intro>
-        Converting ideas <FaLightbulb style={{color: '#FFF57A'}}/> into a digital experience.
-      </Intro>
-      <H2>
-          Software Engineer with experience in developing Full Stack Applications
-          from scratch using the MERN stack.
-      </H2>
+      <Title>
+          Software Engineer.
+      </Title>
       <H2>
         <A href='mailto:abrahamesparza.dev@gmail.com'>
-          Send me an email.
+          Email.
         </A>
       </H2>
     </Body>

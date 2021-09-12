@@ -21,10 +21,11 @@ const Projects = () => {
   `;
   const DIV = styled.div`
     max-width: 100%;
+    background-color: #e3e3e3;
     ${'' /* animation:${FadeIn} linear 3s; */}
   `
   const Title = styled.h3`
-    color: #F0F0F0;
+    color: #262626;
     font-family: 'Abel', sans-serif;
   `
 
@@ -35,10 +36,10 @@ const Projects = () => {
       transition: 1.0s;
       margin-right: 40px;
       border-radius: 5px;
-      color: #F0F0F0;
+      color: #262626;
       &:hover {
         background-color: #8AB3FF;
-        color: #262626;
+        color: #757575;
         opacity: 50%;
       }
     `
@@ -47,7 +48,7 @@ const Projects = () => {
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    color: #F0F0F0;
+    color: #262626;
     font-family: 'Abel', sans-serif;
     ${'' /* animation: ${FadeIn} linear 3s; */}
     justify-content: center;
@@ -55,13 +56,13 @@ const Projects = () => {
     }
   `;
   const H1 = styled.h1`
-    color: #F0F0F0;
+    color: #262626;
     text-align: center;
     font-family: 'Abel', sans-serif;
     ${'' /* animation: ${FadeIn} linear 3s; */}
   `
   const ATTR = styled.a`
-    color: #F0F0F0;
+    color: #262626;
     text-decoration: none;
   `
   // styles

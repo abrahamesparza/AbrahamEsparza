@@ -65,7 +65,7 @@ const About = ({ FadeIn }) => {
     text-align: center;
     font-family: 'Abel', sans-serif;
     animation: ${FadeIn} linear 3s;
-    color: #F0F0F0;
+    color: #262626;
   `
 
   const Details = styled.p`
@@ -74,7 +74,7 @@ const About = ({ FadeIn }) => {
     font-size: 24px;
     font-family: 'Abel', sans-serif;
     animation: ${FadeIn} linear 3s;
-    color: #F0F0F0;
+    color: #262626;
   `;
 
   const UL = styled.ul`
@@ -99,7 +99,7 @@ const About = ({ FadeIn }) => {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    color: #F0F0F0;
+    color: #262626;
     font-size: 20px;
     margin: 5%;
     padding: 5%;
