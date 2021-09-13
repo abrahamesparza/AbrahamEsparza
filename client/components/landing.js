@@ -1,6 +1,8 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
 
+import Card from './card';
+
 const Landing = ({ FadeIn }) => {
   const Intro = styled.h1`
     text-align: center;
@@ -12,7 +14,7 @@ const Landing = ({ FadeIn }) => {
   const Body = styled.div`
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     ${'' /* grid-gap: 150px; */}
     background-color: #e3e3e3;
     min-height: 100vh;
@@ -44,7 +46,7 @@ const Landing = ({ FadeIn }) => {
     justify-content: center;
     font-size: 36px;
     margin: auto;
-    padding-top: 5%;
+    ${'' /* padding-top: 5%; */}
     color: #262626;
     animation: ${FadeIn} linear 4.0s;
     font-family: 'Abel', sans-serif;
@@ -72,11 +74,7 @@ const Landing = ({ FadeIn }) => {
       <Title>
           Software Engineer.
       </Title>
-      <H2>
-        <A href='mailto:abrahamesparza.dev@gmail.com'>
-          Email.
-        </A>
-      </H2>
+      <Card />
     </Body>
   )
 }
