@@ -40,6 +40,9 @@ const Card = () => {
   `
 
   return (
+    /*
+      next: iterate through each repo and display as a card using templates of my Card and Container styled components
+    */
     <DIV>
       <CardTemplate>
         <h1 style={{ width: '100%', textAlign: 'center' }}>Project Name/IMG</h1>
