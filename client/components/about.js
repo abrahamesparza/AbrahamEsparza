@@ -115,7 +115,6 @@ const About = ({ FadeIn }) => {
     }
   `
   return (
-    // <div style={{backgroundColor: '#262626'}}>
     <Body>
       <Intro>Hi, I'm Abraham</Intro>
         <Main1>
@@ -129,8 +128,6 @@ const About = ({ FadeIn }) => {
             <LI>
               Daily Strength Trainer.<FaDumbbell style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
             </LI>
-          {/* </UL> */}
-          {/* <UL> */}
             <LI>
               Weekend T-Ball Coach.<FaBaseballBall style={{fontSize: '24px', color: '#F0F0F0', margin: 'auto'}}/>
             </LI>

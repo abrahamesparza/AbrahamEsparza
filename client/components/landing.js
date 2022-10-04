@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
 
-import Card from './card';
 
 const Landing = ({ FadeIn }) => {
   const Intro = styled.h1`
@@ -46,11 +45,9 @@ const Landing = ({ FadeIn }) => {
     justify-content: center;
     font-size: 36px;
     margin: auto;
-    ${'' /* padding-top: 5%; */}
     color: #262626;
     animation: ${FadeIn} linear 4.0s;
     font-family: 'Abel', sans-serif;
-    width: 500px;
     @media (max-width: 500px) {
       width: 350px;
       margin: auto
@@ -74,7 +71,6 @@ const Landing = ({ FadeIn }) => {
       <Title>
           Software Engineer.
       </Title>
-      <Card />
     </Body>
   )
 }
