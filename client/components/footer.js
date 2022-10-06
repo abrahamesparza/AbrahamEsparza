@@ -16,6 +16,9 @@ const Footer = () => {
   justify-content: space-evenly;
   height: 80px;
   padding-top: 50px;
+  @media (max-width: 390px) {
+    padding-top: 10%;
+  }
   ${'' /* background-color: #e3e3e3; */}
   ${'' /* margin-top: 50px; */}
 `;
