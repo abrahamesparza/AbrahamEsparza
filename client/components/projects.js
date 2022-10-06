@@ -21,7 +21,7 @@ const Projects = () => {
   `;
   const DIV = styled.div`
     max-width: 100%;
-    background-color: #e3e3e3;
+    ${'' /* background-color: #e3e3e3; */}
     ${'' /* animation:${FadeIn} linear 3s; */}
   `
   const Title = styled.h3`
@@ -82,7 +82,7 @@ const Projects = () => {
     <H1>Portfolio</H1>
       <UL>
         {repos.map(repo => {
-          if (repo.name !== 'abrahamesparza.github.io' && repo.name !== 'front-end-interview-handbook' && repo.name !== 'react-take-home' && repo.name !== 'front-end-interview-preparation-guide' && repo.name !== 'hrext07-my-cruddy-app') {
+          if (repo.name !== 'abrahamesparza.github.io' && repo.name !== 'front-end-interview-handbook' && repo.name !== 'react-take-home' && repo.name !== 'front-end-interview-preparation-guide' && repo.name !== 'hrext07-my-cruddy-app' && repo.name !== 'mt-metadata') {
             return (
               <LI key={repo.id}>
               <Title> <ATTR href={repo.html_url} target='_blank'>{repo.name}</ATTR></Title>
