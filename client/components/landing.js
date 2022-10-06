@@ -1,76 +1,69 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
+import About from './about';
 
 
 const Landing = ({ FadeIn }) => {
-  const Intro = styled.h1`
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    animation: ${FadeIn} linear 1.5s;
-    color: #262626;
-    ${'' /* margin-top: 25px; */}
-  `;
   const Body = styled.div`
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(2, 1fr);
-    ${'' /* grid-gap: 150px; */}
-    background-color: #e3e3e3;
+    grid-template-rows: 25px 250px 50px 100px 150px;
+    ${'' /* background-color: #e3e3e3; */}
+    animation: ${FadeIn} linear 1.5s;
     min-height: 100vh;
     height: 100vh;
-    ${'' /* margin-top: 50px; */}
-    @media (max-width: 500px) {
-      grid-template-rows: auto auto 300px;
-      margin: auto;
-      grid-gap: 60px;
-    }
+    width: 75vw;
+    @media (max-width: 390px) {
+      display: grid;
+      grid-template-rows: 25px 200px 50px auto auto;
+      width: 90vw;
+      height: 100vh;
+  }
   `;
-  const H2 = styled.h2`
-    display: center;
-    textAlign: center;
-    font-size: 28px;
-    margin: auto;
-    color: #262626;
-    animation: ${FadeIn} linear 4.0s;
-    font-family: 'Abel', sans-serif;
-    @media (max-width: 500px) {
-      width: 350px;
-      margin: auto
-    }
-  `;
-
-  const Title = styled.h2`
+  const Introduction = styled.p`
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    font-size: 36px;
-    margin: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 20px;
     color: #262626;
-    animation: ${FadeIn} linear 4.0s;
     font-family: 'Abel', sans-serif;
-    @media (max-width: 500px) {
-      width: 350px;
-      margin: auto
-    }
+    padding-left: 5vw;
   `;
-
-  const A = styled.a`
-    color: #262626;
-    text-decoration: none;
-    &:hover {
-      color: #8CB9FF;
-      font-size: 28px;
-      transition: 0.5s;
-    }
-    @media (max-width: 500px) {
-      color: #8CB9FF;
-    }
-  `;
+  const AboutText = styled.h2`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #262626;
+  font-family: 'Abel', sans-serif;
+  padding-left: 5vw;
+  ${'' /* @media (max-width: 390px) {
+    width: 90vw;
+    height: 90vh;
+  } */}
+`;
+  const atrStyle = {
+    color: '#5dcfff',
+    textDecoration: 'none'
+  }
   return (
     <Body>
-      <Title>
-          Software Engineer.
-      </Title>
+      <Introduction>
+        Abraham Esparza
+      </Introduction>
+      <Introduction>
+          Software Engineer | Building at&nbsp;<a style={atrStyle} href="https://winnie.com">Winnie</a>
+      </Introduction>
+      <AboutText>About</AboutText>
+      <Introduction>
+        Abraham focuses on backend programming at Winnie. He values contributing clean code, learning where he can improve and taking appropriate actions to do so.
+      </Introduction>
+      <Introduction>
+        He began his coding journey by utilzing online resources to gain a basic grasp of how to code and how programs work. He then joined Hack Reactor, a rigorous remote program where he learned more advanced topics, resulting in the ability to develop full stack applications from scratch.
+      </Introduction>
+      <Introduction>
+        Although his studies were focused on writing in Javascript; Abraham took initiative to learn a new language that would fit his current position and is now writing in Python.
+      </Introduction>
     </Body>
   )
 }

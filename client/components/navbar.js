@@ -24,7 +24,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 25px 0px 25px;
-    background-color: #e3e3e3;
+    ${'' /* background-color: #e3e3e3; */}
   `;
   const Title = styled.h1`
     font-size: 48px;
@@ -44,7 +44,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
     list-style-type: none;
   `;
 
-  const list = ['Home', 'About', 'Projects'];
+  const list = ['Home', 'Portfolio'];
 
   if (!menu) {
     return (
@@ -73,7 +73,7 @@ const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
           A | E
         </Title>
         <UL>
-        <AiOutlineCloseCircle onClick={handleMenu}/>
+        <AiOutlineCloseCircle onClick={handleMenu}/><br/>
         {list.map(item => (
           <li onClick={handleDisplay}>{item}</li>
         ))}

@@ -5,9 +5,7 @@ import Contact from './contact';
 import Landing from './landing';
 
 const Page = ({ page , display, repos, FadeIn }) => {
-  if (page === 'About' && display === true) {
-    return <About FadeIn={FadeIn}/>
-  } else if (page === 'Projects' && display === true) {
+  if (page === 'Projects' && display === true) {
     // need to create Projects component and pass here
     return <Projects repos={repos}/>;
   } else if (page === 'Contact' && display === true) {
