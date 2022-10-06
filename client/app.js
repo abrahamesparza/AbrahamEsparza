@@ -41,7 +41,7 @@ const App = () => {
   return (
     <Body>
       <Navbar displayHome={displayHome} handleDisplay={handleDisplay} FadeIn={FadeIn}/>
-      {setDisplay === false ? null : <Page page={page} display={displayPage} FadeIn={FadeIn}/>}
+      {setDisplay === false ? null : <Page page={page} display={displayPage} FadeIn={FadeIn}/>}<br/>
       <Footer />
     </Body>
   )
