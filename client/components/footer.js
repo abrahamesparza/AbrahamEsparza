@@ -1,13 +1,12 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components';
-import { FaLinkedinIn, FaInstagram, FaGithub, FaMedium, FaFilePdf, FaFile } from "react-icons/fa";
+import styled from 'styled-components';
+import { FaLinkedinIn, FaInstagram, FaGithub, FaMedium } from "react-icons/fa";
 
 const Footer = () => {
 
   const Body = styled.div`
     display: grid;
     grid-template-rows: auto;
-    ${'' /* margin-top: 50px; */}
   `
 
   const Foot = styled.footer`
@@ -19,8 +18,6 @@ const Footer = () => {
   @media (max-width: 390px) {
     padding-top: 10%;
   }
-  ${'' /* background-color: #e3e3e3; */}
-  ${'' /* margin-top: 50px; */}
 `;
 
   return (
