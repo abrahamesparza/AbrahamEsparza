@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled, { keyframes } from 'styled-components';
-import Footer from './footer.js';
+import styled from 'styled-components';
 import axios from 'axios';
 
 const Projects = () => {
@@ -9,20 +8,10 @@ const Projects = () => {
   useEffect(() => {
     getRepos();
   }, [])
-
-  // styles
-  const FadeIn = keyframes`
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1
-    }
-  `;
   const DIV = styled.div`
-    max-width: 100%;
-    ${'' /* background-color: #e3e3e3; */}
-    ${'' /* animation:${FadeIn} linear 3s; */}
+    min-height: 100vh;
+    height: 100vh;
+    width: 75vw;
   `
   const Title = styled.h3`
     color: #262626;
@@ -32,7 +21,6 @@ const Projects = () => {
     const LI = styled.li`
       margin: 3px;
       padding-left: 15px;
-      ${'' /* text-align: center; */}
       transition: 1.0s;
       margin-right: 40px;
       border-radius: 5px;
@@ -50,7 +38,6 @@ const Projects = () => {
     font-size: 18px;
     color: #262626;
     font-family: 'Abel', sans-serif;
-    ${'' /* animation: ${FadeIn} linear 3s; */}
     justify-content: center;
     list-style-type: none;
     }
@@ -59,14 +46,12 @@ const Projects = () => {
     color: #262626;
     text-align: center;
     font-family: 'Abel', sans-serif;
-    ${'' /* animation: ${FadeIn} linear 3s; */}
   `
   const ATTR = styled.a`
     color: #262626;
     text-decoration: none;
   `
-  // styles
-  // functions
+
   const getRepos = () => {
     axios.get('https://api.github.com/users/abrahamesparza/repos')
     .then(data => {
@@ -76,13 +61,16 @@ const Projects = () => {
     .catch(err => console.log('err', err));11
   };
 
-  console.log('repos', repos)
+  let reposToAvoid = [
+    'abrahamesparza.github.io', 'front-end-interview-handbook',
+    'react-take-home', 'front-end-interview-preparation-guide',
+    'mt-metadata', 'tinder-clone', 'recursion-prompts', 'robot-cards',
+    'Javascript-Exercise', 'hrext07-my-cruddy-app', 'cowlist']
   return (
     <DIV>
-    <H1>Portfolio</H1>
       <UL>
         {repos.map(repo => {
-          if (repo.name !== 'abrahamesparza.github.io' && repo.name !== 'front-end-interview-handbook' && repo.name !== 'react-take-home' && repo.name !== 'front-end-interview-preparation-guide' && repo.name !== 'hrext07-my-cruddy-app' && repo.name !== 'mt-metadata') {
+          if (!reposToAvoid.includes(repo.name)) {
             return (
               <LI key={repo.id}>
               <Title> <ATTR href={repo.html_url} target='_blank'>{repo.name}</ATTR></Title>
