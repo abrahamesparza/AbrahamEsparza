@@ -33,7 +33,7 @@ const Landing = ({ FadeIn }) => {
   return (
     <Body>
         <Introduction>
-            Software Engineer | Formerly building at&nbsp;<a style={atrStyle} href="https://winnie.com">Winnie</a>
+            SWE | Formerly building at&nbsp;<a style={atrStyle} href="https://winnie.com">Winnie</a>
         </Introduction>
         <Introduction>
           Hi, I'm Abraham Esparza
