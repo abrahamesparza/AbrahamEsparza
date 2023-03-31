@@ -9,6 +9,12 @@ const Landing = ({ FadeIn }) => {
     min-height: 100vh;
     height: 100vh;
     width: 75vw;
+    @media (max-width: 390px) {
+      display: grid;
+      grid-template-rows: auto auto auto auto auto;
+      width: 90vw;
+      height: 100vh;
+  }
   `;
   const Introduction = styled.p`
     display: flex;
