@@ -9,7 +9,7 @@ import Projects from "./components/projects";
 const App = () => {
   return (
     <div>
-       <Navbar />
+      <Navbar />
       <Intro />
       <Projects />
       <Contact />
