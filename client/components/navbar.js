@@ -1,83 +1,51 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { FiMenu } from 'react-icons/fi';
-import { AiOutlineCloseCircle } from 'react-icons/ai';
+import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 
-const Navbar = ({handleDisplay, displayHome, FadeIn}) => {
-  const [menu, setMenu] = useState(false);
-
-  useEffect(() => {
-
-  }, []);
-
-  const handleMenu = () => {
-    if (!menu) {
-      setMenu(true);
-    } else {
-      setMenu(false)
-    }
-    console.log('list', list);
-  }
-
-  const Wrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 25px 0px 25px;
-  `;
-  const Title = styled.h1`
-    font-size: 48px;
-    color: #262626;
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-  `;
-  const UL = styled.ul`
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
-    color: #262626;
-    font-family: 'Abel', sans-serif;
-    justify-content: center;
-    list-style-type: none;
-  `;
-
-  const list = ['Home', 'Portfolio'];
-
-  if (!menu) {
-    return (
-      <Wrapper>
-        <Title onClick={displayHome}>
-        A | E
-        </Title>
-        <FiMenu
-          style={{
-          display: 'flex',
-          flexDirection: 'column',
-          marginTop: '45px',
-          color: '#262626',
-          fontSize: '36px',
-          textAlign: 'center',
-          }}
-          onClick={handleMenu}
-          />
-      </Wrapper>
-    )
-  }
-  else {
-    return (
-      <Wrapper>
-        <Title onClick={displayHome}>
-          A | E
-        </Title>
-        <UL>
-        <AiOutlineCloseCircle onClick={handleMenu}/><br/>
-        {list.map(item => (
-          <li onClick={handleDisplay}>{item}</li>
-        ))}
-        </UL>
-    </Wrapper>
-    )
-  }
-}
+const Navbar = () => {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <h1>
+            <a href="index.html">
+              <FontAwesomeIcon icon={faTerminal} />
+              <span>A | E</span>
+            </a>
+          </h1>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/abrahamesparza/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
+            <span className="sr-only">LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/abrahamesparza"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
+            <span className="sr-only">Github</span>
+          </a>
+        </li>
+        <li className="button">
+          <a
+            href="https://docs.google.com/document/d/1nwQ8M4DC9Uqr9V1h4dW8syG-jCrkDVwI-VP4gui-ACY/edit?usp=sharing"
+            className="resume-text"
+          >
+            Resume
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
 export default Navbar;

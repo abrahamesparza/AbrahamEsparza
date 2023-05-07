@@ -1,43 +1,45 @@
 import React from 'react'
-import styled from 'styled-components';
-import { FaLinkedinIn, FaInstagram, FaGithub, FaMedium } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
-
-  const Body = styled.div`
-    display: grid;
-    grid-template-rows: auto;
-  `
-
-  const Foot = styled.footer`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  height: 80px;
-  padding-top: 50px;
-  @media (max-width: 390px) {
-    padding-top: 10%;
-  }
-`;
-
   return (
-    <Body>
-      <Foot>
-        <a href='https://www.linkedin.com/in/abrahamesparza/' target='_blank'>
-          <FaLinkedinIn style={{fontSize: '24px', color: '#2867B2' }}/>
-        </a>
-        <a href='https://github.com/abrahamesparza' target='_blank'>
-          <FaGithub style={{fontSize: '24px', color: '#211F1F' }}/>
-        </a>
-        <a href='https://abrahammesparza.medium.com/' target='_blank'>
-          <FaMedium style={{fontSize: '24px', color: '#262626' }}/>
-        </a>
-        <a href='https://www.instagram.com/abrahammesparza/' target='_blank'>
-          <FaInstagram style={{fontSize: '24px', color: '#5851db' }}/>
-        </a>
-      </Foot>
-    </Body>
-  )
-}
+    <footer id="footer">
+      <h2>Abraham Esparza &middot; Software Engineer</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/abrahamesparza/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
+            <span className="sr-only">LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/abrahamesparza"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
+            <span className="sr-only">Github</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:abrahamesparza.dev@gmail.com">
+            <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
+            <span className="sr-only">Email</span>
+          </a>
+        </li>
+      </ul>
+      <p>
+        <small>&copy; 2023 Abraham Esparza. All rights reserved.</small>
+      </p>
+    </footer>
+  );
+};
 
 export default Footer;

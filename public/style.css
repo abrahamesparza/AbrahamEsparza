@@ -1,0 +1,279 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--charcoal);
+    color: var(--white);
+    font-size: var(--font-size);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--lavender);
+  }
+  
+  a:hover {
+    text-shadow: 1px 1px 2px var(--white);
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  /* intro */
+  
+  .intro-statement {
+    font-family: var(--montserrat);
+  }
+  
+  #intro {
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  #intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  #intro .name {
+    font-family: var(--montserrat);
+  }
+  
+  .name span {
+    font-family: var(--oswald);
+    font-size: 4rem;
+    color: var(--lavender);
+    display: block;
+  }
+  
+  /* contact */
+  
+  #contact {
+    width: 400px;
+    padding: 3rem 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--montserrat);
+  }
+  
+  .contact-section {
+    background-color: var(--gray);
+  }
+  
+  .gradient {
+    background: linear-gradient(
+      90deg,
+      rgba(104, 219, 255, 1) 0%,
+      rgba(174, 125, 186, 1) 100%
+    );
+    height: 2px;
+  }
+  
+  #contact p:last-child {
+    margin-top: 3rem;
+  }
+  
+  /* nav */
+  
+  nav {
+    font-family: var(--montserrat);
+    font-size: 80%;
+    padding: 1rem;
+  }
+  
+  nav h1 a {
+    font-family: var(--oswald);
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+  nav [class*="fa-"] {
+    font-size: 175%;
+    color: var(--blue);
+  }
+  
+  nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--green);
+  }
+  
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+  }
+  
+  nav a:hover {
+    color: var(--white);
+  }
+  
+  .button {
+    background-color: var(--magenta);
+    color: var(--charcoal);
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    color: var(--white);
+  }
+  
+  .resume-text {
+    color: var(--charcoal);
+  }
+  
+  /* footer */
+  
+  footer {
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+  }
+  
+  footer h2 {
+    font-family: var(--montserrat);
+  }
+  
+  footer p {
+    font-family: var(--montserrat);
+  }
+  
+  /* projects */
+  
+  #projects {
+    background-color: var(--purple);
+    font-family: var(--oswald);
+    /* color: var(--charcoal); */
+    padding: 4rem 1rem;
+  }
+  
+  #projects p {
+    font-size: 1.2rem;
+  }
+  
+  #projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+  }
+  
+  #projects h3 {
+    color: var(--blue);
+  }
+  
+  #projects h4 {
+    font-size: 1rem;
+    font-family: var(--montserrat);
+    margin: 0;
+  }
+  
+  #projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  
+  #projects img {
+    margin: 2rem 0 4rem 0;
+    border-radius: 25px;
+  }
+  
+  .blackbox {
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.5;
+    /* padding: 1rem; */
+  }
+  
+  @media (min-width: 850px) {
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    @media (min-width: 550px) {
+      article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .text {
+        order: 2;
+        text-align: right;
+      }
+      #projects ul {
+        justify-content: flex-end;
+      }
+    }
+  
+    nav li:first-child {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
+    }
+  }
+  
+  /* variables and html formatting */
+  :root {
+    --purple: #1a1a1a;
+    --white: #f4f5f6;
+    --lavender: #b1aad4;
+    --gray: #333333;
+    --charcoal: #222222;
+    --blue: #c5e2f6;
+    --green: #72f287;
+    --magenta: #e2ccff;
+  
+    --font-size: 1.3rem;
+    --montserrat: "Montserrat", sans-serif;
+    --oswald: "Oswald", sans-serif;
+  }
+  
+  html {
+    box-staging: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-staging: inherit;
+  }
+  
