@@ -18,7 +18,7 @@ const Projects = () => {
         <h2>Projects</h2>
         <article>
           <div className="text">
-            <h3>Quote Generator</h3>
+            <h3>Quotes</h3>
             <p className="blackbox">
               Access thousands of{" "}
               <a
