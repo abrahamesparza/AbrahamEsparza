@@ -57,7 +57,7 @@ body {
   /* contact */
   
   #contact {
-    width: 400px;
+    width: 100%;
     padding: 3rem 0;
     margin: 0 auto;
     text-align: center;
@@ -212,6 +212,11 @@ body {
   #projects img {
     margin: 2rem 0 4rem 0;
     border-radius: 25px;
+  }
+
+  #projects .video {
+    width: 100%;
+    height: auto;
   }
   
   .blackbox {
