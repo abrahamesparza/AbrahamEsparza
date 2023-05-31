@@ -74,29 +74,6 @@ const Projects = () => {
             />
           </div>
         </article>
-        <article>
-          <div className='text'>
-            <h3>CoffeeMaster</h3>
-            <p className='blackbox'>
-              <a
-              href='https://github.com/abrahamesparza/swift-cm-app'
-              rel='noreferrer'
-              target='_blank'>CoffeeMaster, </a>
-            a simple iOS app that allows users to scroll through a list of products, add to cart and checkout.
-            </p>
-            <h4>Technologies used</h4>
-            <ul>
-                {coffeeMasterTechUsed.map(item => (
-                  <li key={item}>{item}</li>
-                ))}
-            </ul>
-          </div>
-          <div className='video'>
-            <img
-            src="https://user-images.githubusercontent.com/21293669/238452285-6515ed21-3ad5-4bf9-9653-bbdadfff67f1.gif"
-            alt='coffee masters gif'/>
-          </div>
-        </article>
       </section>
       <div className="gradient"></div>
     </div>
